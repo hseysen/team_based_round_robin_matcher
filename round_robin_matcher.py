@@ -24,13 +24,13 @@ def random_games(team1, team2):
             for j in first_team_members:
                 s = randint(0, 1)
                 if s == 0:
-                    if went_second[j] != 4:
+                    if went_second[j] != n//2:
                         games[i, j, 0], games[i, j, 1] = games[i, j, 1], games[i, j, 0]
                         went_second[j] += 1
                     else:
                         went_first[j] += 1
                 else:
-                    if went_first[j] != 4:
+                    if went_first[j] != n//2:
                         went_first[j] += 1
                     else:
                         games[i, j, 0], games[i, j, 1] = games[i, j, 1], games[i, j, 0]
